@@ -19,8 +19,8 @@ app.add_middleware(
 )
 
 # Configure Gemini API
-# Hardcoded fallback since PowerShell environment variables are causing issues
-api_key = os.environ.get("GEMINI_API_KEY", "AIzaSyC_dAlyVhyvRZxbBVydBYkLm-O2N7U0lqs")
+# Get API key from environment variable (Never hardcode this before uploading to GitHub!)
+api_key = os.environ.get("GEMINI_API_KEY")
 if api_key:
     genai.configure(api_key=api_key)
  
