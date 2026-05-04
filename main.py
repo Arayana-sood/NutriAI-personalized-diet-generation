@@ -91,7 +91,17 @@ async def upload_prescription(file: UploadFile = File(...)):
         print(f"Error processing prescription: {error_msg}")
         raise HTTPException(status_code=500, detail=f"Backend Error: {error_msg}")
 
-# Mount the static frontend files so FastAPI can serve the entire website
-# This makes deploying to Render extremely easy and prevents backend disconnects
-if os.path.isdir("diet_platform"):
-    app.mount("/", StaticFiles(directory="diet_platform", html=True), name="static")
+# Serve the main index.html file at the root URL
+@app.get("/")
+async def root():
+    index_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "diet_platform", "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    return {"error": "diet_platform/index.html not found on the server. Please ensure the folder was uploaded correctly to GitHub."}
+
+# Mount the static frontend files so FastAPI can serve the CSS and JS
+static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "diet_platform")
+if os.path.isdir(static_dir):
+    app.mount("/", StaticFiles(directory=static_dir), name="static")
+else:
+    print(f"WARNING: Static directory not found at {static_dir}")
