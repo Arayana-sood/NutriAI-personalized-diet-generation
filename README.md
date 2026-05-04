@@ -1,14 +1,3 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/Arayana-sood/NutriAI-personalized-diet-generation)
-![GitHub stars](https://img.shields.io/github/stars/Arayana-sood/NutriAI-personalized-diet-generation?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Arayana-sood/NutriAI-personalized-diet-generation?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Arayana-sood/NutriAI-personalized-diet-generation)
-![GitHub license](https://img.shields.io/github/license/Arayana-sood/NutriAI-personalized-diet-generation)
-
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Flask](https://img.shields.io/badge/Backend-Flask-black)
-![Frontend](https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-orange)
-![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-green)
-![Status](https://img.shields.io/badge/Status-Active-success)
 
 # 🥗 AI Diet Generation System
 
@@ -40,3 +29,41 @@ Scikit-learn, Pandas, NumPy
 ---
 
 ## 📂 Project Structure
+diet-generator/
+│── frontend/
+│── backend/
+│── model/
+│── static/
+│── templates/
+│── README.md
+
+---
+
+## ⚙️ How It Works
+1. User enters health details  
+2. Backend processes data  
+3. ML model analyzes inputs  
+4. Diet plan is generated  
+5. Results displayed on UI  
+
+---
+
+## 🧪 Setup
+git clone https://github.com/Arayana-sood/NutriAI-personalized-diet-generation
+
+cd NutriAI-personalized-diet-generation
+pip install -r requirements.txt
+python app.py
+
+
+---
+
+## 👨‍💻 Team
+- Arayana Sood  
+- Jigyasa Pandey  
+- Sangam Gupta  
+
+---
+
+## 📜 License
+This project is for educational purposes.
