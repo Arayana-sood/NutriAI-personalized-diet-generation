@@ -58,12 +58,5 @@ python app.py
 
 ---
 
-## 👨‍💻 Team
-- Arayana Sood  
-- Jigyasa Pandey  
-- Sangam Gupta  
-
----
-
 ## 📜 License
 This project is for educational purposes.
